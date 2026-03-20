@@ -7,7 +7,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
     public static Retrofit retrofit;
 
-
     private static final String URL = "https://dummyjson.com/";
 
     public static ApiService getRetrofit (){

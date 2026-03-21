@@ -101,7 +101,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/arrow_back"
+                android:src="@drawable/location"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
@@ -124,7 +124,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/arrow_back"
+                android:src="@drawable/mail"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
@@ -215,7 +215,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_marginTop="8dp"
-                        android:src="@drawable/calendar_icon"
+                        android:src="@drawable/calendar"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/lblBirthDate" />
 
@@ -248,7 +248,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_marginTop="8dp"
-                        android:src="@drawable/calendar_icon"
+                        android:src="@drawable/bloodtype"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/lblBloodGroup" />
 
@@ -283,7 +283,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_marginTop="8dp"
-                        android:src="@drawable/calendar_icon"
+                        android:src="@drawable/color_lens"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/lblHairEyeColor" />
 
@@ -343,7 +343,7 @@
                         android:layout_height="18dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:src="@drawable/person_icon"
+                        android:src="@drawable/person"
                         app:layout_constraintStart_toEndOf="@id/guideline"
                         app:layout_constraintTop_toBottomOf="@id/lblAge" />
 
@@ -367,6 +367,7 @@
                         android:layout_height="18dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
+                        android:src="@drawable/scale"
                         app:layout_constraintStart_toStartOf="@id/guideline"
                         app:layout_constraintTop_toBottomOf="@id/lblHeight_Weight" />
 
@@ -389,6 +390,7 @@
                         android:layout_height="18dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
+                        android:src="@drawable/email"
                         app:layout_constraintStart_toStartOf="@id/guideline"
                         app:layout_constraintTop_toBottomOf="@id/lblUserName" />
 

@@ -1,11 +1,68 @@
 package com.theo.androidAssi.model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "users")
 public class User {
+    @PrimaryKey
     public int id;
+
+    @ColumnInfo(name = "firstname")
     public String firstName;
+
+    @ColumnInfo(name = "lastname")
     public String lastName;
+
+    @ColumnInfo(name = "maidenName")
     public String maidenName;
+    @ColumnInfo
+    public int age;
+
+    @ColumnInfo public String gender;
+    @ColumnInfo public String email;
+    @ColumnInfo public String phone;
+    @ColumnInfo public String username;
+    @ColumnInfo
+    public String password;
+    @ColumnInfo
+    public String birthDate;
+    @ColumnInfo
+    public String image;
+    @ColumnInfo
+    public String bloodGroup;
+
+    @ColumnInfo
+    public double height;
+    @ColumnInfo
+    public double weight;
+    @ColumnInfo
+    public String eyeColor;
+    @ColumnInfo
+    public Hair hair;
+    @ColumnInfo
+    public String ip;
+    @ColumnInfo
+    public Address address;
+    @ColumnInfo
+    public String macAddress;
+    @ColumnInfo
+    public String university;
+    @ColumnInfo
+    public Bank bank;
+    @ColumnInfo
+    public Company company;
+    @ColumnInfo
+    public String ein;
+    @ColumnInfo
+    public String ssn;
+    @ColumnInfo
+    public String userAgent;
+    @ColumnInfo
+    public Crypto crypto;
+    @ColumnInfo
+    public String role;
 
     @Override
     public String toString() {
@@ -40,32 +97,6 @@ public class User {
                 ", role='" + role + '\'' +
                 '}';
     }
-
-    public int age;
-    public String gender;
-    public String email;
-    public String phone;
-    public String username;
-    public String password;
-    public String birthDate;
-    public String image;
-    public String bloodGroup;
-    public double height;
-    public double weight;
-    public String eyeColor;
-    public Hair hair;
-    public String ip;
-    public Address address;
-    public String macAddress;
-    public String university;
-    public Bank bank;
-    public Company company;
-    public String ein;
-    public String ssn;
-    public String userAgent;
-    public Crypto crypto;
-    public String role;
-
 }
 
 

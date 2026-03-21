@@ -43,9 +43,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.squareup.retrofit2:adapter-rxjava3:3.0.0")
+    implementation(libs.adapter.rxjava3)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.rxjava) // Check Maven for latest version
     implementation(libs.rxandroid)
+
+    implementation (libs.room.runtime)
+    annotationProcessor (libs.room.compiler)
 }

@@ -9,11 +9,13 @@
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
+        android:background="@drawable/label"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Users"
+            android:textColor="@color/black"
             android:textAlignment="center"
             android:textSize="25sp"
             android:textStyle="bold"

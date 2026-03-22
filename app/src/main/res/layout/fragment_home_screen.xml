@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:text="Users"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             />
     </Toolbar>
@@ -24,6 +24,6 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_card" />
+        tools:listitem="@layout/person_card" />
 
 </LinearLayout>

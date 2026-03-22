@@ -17,6 +17,9 @@ import com.theo.androidAssi.R;
 import com.theo.androidAssi.model.User;
 import com.theo.androidAssi.viewmodel.UserViewModel;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class HomeScreen extends Fragment implements UserAdapter.OnUserClickListener {
 
     private RecyclerView recyclerView;
@@ -43,10 +46,12 @@ public class HomeScreen extends Fragment implements UserAdapter.OnUserClickListe
         viewModel.getUsers().observe(getViewLifecycleOwner(), users -> {
             if (users != null) {
                 adapter.setUsers(users);
+                // Trigger fetch only if DB is empty
+                if (users.isEmpty()) {
+                    viewModel.refreshUsers();
+                }
             }
         });
-
-        viewModel.fetchUsers();
     }
 
     @Override

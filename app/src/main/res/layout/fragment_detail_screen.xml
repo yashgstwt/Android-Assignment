@@ -12,22 +12,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/cardview_light_background"
-            android:src="@drawable/arrow_back" />
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:tint="@color/on_surface"
+                android:background="@color/card_background"
+                android:backgroundTintMode="screen"
+                android:src="@drawable/arrow_back" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:text="Details"
-            android:textAlignment="center"
+
+            android:layout_marginLeft="10dp"
+            android:textAlignment="textStart"
             android:textFontWeight="@integer/material_motion_duration_long_1"
             android:textSize="20sp">
 
@@ -60,13 +70,15 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginVertical="5dp"
-            app:cardBackgroundColor="@color/black">
+            app:cardBackgroundColor="@color/green">
 
             <TextView
+                android:id="@+id/role"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginVertical="5dp"
+                android:textColor="@color/black"
                 android:text="Admin" />
 
         </com.google.android.material.card.MaterialCardView>
@@ -102,6 +114,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
+                android:tint="@color/on_surface"
                 android:src="@drawable/location"
                 app:layout_constraintVertical_bias="1.0" />
 
@@ -125,6 +138,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
+                android:tint="@color/on_surface"
                 android:src="@drawable/mail"
                 app:layout_constraintVertical_bias="1.0" />
 
@@ -160,7 +174,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="@color/background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="0dp">
 
@@ -185,7 +199,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:text="Personal Info"
-                        android:textColor="#333333"
+                        android:textColor="@color/on_surface"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@id/indicator"
@@ -218,7 +232,8 @@
                         android:layout_marginTop="8dp"
                         android:src="@drawable/calendar"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/lblBirthDate" />
+                        app:layout_constraintTop_toBottomOf="@id/lblBirthDate"
+                        app:tint="@color/on_surface" />
 
                     <TextView
                         android:id="@+id/txtBirthDate"
@@ -226,7 +241,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="May 30, 1996"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/icCalendar"
                         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -249,6 +264,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_marginTop="8dp"
+                        app:tint="@color/on_surface"
                         android:src="@drawable/bloodtype"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/lblBloodGroup" />
@@ -260,7 +276,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="May 30, 1996"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@+id/guideline"
                         app:layout_constraintStart_toEndOf="@id/icBlood"
@@ -284,6 +300,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_marginTop="8dp"
+                        app:tint="@color/on_surface"
                         android:src="@drawable/color_lens"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/lblHairEyeColor" />
@@ -295,7 +312,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="May 30, 1996"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toStartOf="@+id/guideline"
                         app:layout_constraintStart_toEndOf="@id/icHairEyeColor"
@@ -316,11 +333,12 @@
 
 
                     <TextView
+                        android:id="@+id/txtAgeGender"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="29, Female"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/icUser"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -345,6 +363,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/person"
+                        app:tint="@color/on_surface"
                         app:layout_constraintStart_toEndOf="@id/guideline"
                         app:layout_constraintTop_toBottomOf="@id/lblAge" />
 
@@ -355,7 +374,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:text="29, Female"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/scale"
                         app:layout_constraintStart_toEndOf="@+id/scale"
@@ -369,6 +388,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/scale"
+                        app:tint="@color/on_surface"
                         app:layout_constraintStart_toStartOf="@id/guideline"
                         app:layout_constraintTop_toBottomOf="@id/lblHeight_Weight" />
 
@@ -391,6 +411,7 @@
                         android:layout_height="18dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
+                        app:tint="@color/on_surface"
                         android:src="@drawable/email"
                         app:layout_constraintStart_toStartOf="@id/guideline"
                         app:layout_constraintTop_toBottomOf="@id/lblUserName" />
@@ -402,7 +423,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:text="Theo"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/icUsername"
                         app:layout_constraintTop_toBottomOf="@+id/lblUserName" />
@@ -415,7 +436,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="@color/background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="0dp">
 
@@ -439,7 +460,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:text="Professional"
-                        android:textColor="#333333"
+                        android:textColor="@color/on_surface"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@id/indicator2"
@@ -461,7 +482,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Company"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/lblCompany" />
@@ -472,7 +493,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:text="COMPANY ADDRESS"
-                        android:textColor="#9E9E9E"
+                        android:textColor="@color/on_surface"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtCompany" />
@@ -482,7 +503,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Company"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/lblCompanyAddress" />
@@ -503,7 +524,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="EDUCATION"
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/lblEducation" />
@@ -518,7 +539,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="@color/background"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="0dp">
 
@@ -541,8 +562,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:text="Professional"
-                        android:textColor="#333333"
+                        android:text="Address"
+                        android:textColor="@color/on_surface"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@id/indicator3"
@@ -550,11 +571,11 @@
 
 
                     <TextView
-                        android:id="@+id/lblAddress"
+                        android:id="@+id/lblFullAddress"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Address  wid "
-                        android:textColor="#212121"
+                        android:textColor="@color/on_surface"
                         android:layout_marginTop="20dp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -569,7 +590,7 @@
                         android:textColor="#9E9E9E"
                         android:textSize="11sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/lblAddress" />
+                        app:layout_constraintTop_toBottomOf="@id/lblFullAddress" />
 
 
 

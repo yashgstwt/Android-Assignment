@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.theo.androidAssi.R;
 import com.theo.androidAssi.model.User;
 
@@ -66,6 +67,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         public void bind(User user, OnUserClickListener listener) {
             name.setText(user.firstName + " " + user.lastName);
             status.setText(user.email);
+            
+            Glide.with(itemView.getContext())
+                    .load(user.image)
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .error(R.drawable.ic_launcher_foreground)
+                    .into(profileImage);
+
             itemView.setOnClickListener(v -> listener.onUserClick(user));
         }
     }

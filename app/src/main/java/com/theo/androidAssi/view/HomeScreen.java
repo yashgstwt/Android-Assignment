@@ -46,7 +46,6 @@ public class HomeScreen extends Fragment implements UserAdapter.OnUserClickListe
         viewModel.getUsers().observe(getViewLifecycleOwner(), users -> {
             if (users != null) {
                 adapter.setUsers(users);
-                // Trigger fetch only if DB is empty
                 if (users.isEmpty()) {
                     viewModel.refreshUsers();
                 }

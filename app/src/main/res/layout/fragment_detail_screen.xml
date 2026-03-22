@@ -11,32 +11,33 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.circularreveal.cardview.CircularRevealCardView
             android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
             <ImageButton
                 android:id="@+id/back_button"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:tint="@color/on_surface"
                 android:background="@color/card_background"
                 android:backgroundTintMode="screen"
-                android:src="@drawable/arrow_back" />
+                android:src="@drawable/arrow_back"
+                app:tint="@color/on_surface" />
         </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Details"
-
             android:layout_marginLeft="10dp"
+
+            android:text="Details"
             android:textAlignment="textStart"
             android:textFontWeight="@integer/material_motion_duration_long_1"
             android:textSize="20sp">
@@ -78,8 +79,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginVertical="5dp"
-                android:textColor="@color/black"
-                android:text="Admin" />
+                android:text="Admin"
+                android:textColor="@color/black" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -95,15 +96,16 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="99dp" />
 
-
         <TextView
             android:id="@+id/median_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
+            android:textColor="@color/on_surface"
             android:text="Median Name"
             android:textAlignment="center"
             android:textSize="18sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,9 +116,8 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
-                android:tint="@color/on_surface"
                 android:src="@drawable/location"
-                app:layout_constraintVertical_bias="1.0" />
+                app:tint="@color/on_surface" />
 
             <TextView
                 android:id="@+id/address"
@@ -138,9 +139,8 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_margin="10dp"
-                android:tint="@color/on_surface"
                 android:src="@drawable/mail"
-                app:layout_constraintVertical_bias="1.0" />
+                app:tint="@color/on_surface" />
 
             <TextView
                 android:id="@+id/email_address"
@@ -264,10 +264,10 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_marginTop="8dp"
-                        app:tint="@color/on_surface"
                         android:src="@drawable/bloodtype"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/lblBloodGroup" />
+                        app:layout_constraintTop_toBottomOf="@id/lblBloodGroup"
+                        app:tint="@color/on_surface" />
 
                     <TextView
                         android:id="@+id/txtBlood"
@@ -300,10 +300,10 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_marginTop="8dp"
-                        app:tint="@color/on_surface"
                         android:src="@drawable/color_lens"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/lblHairEyeColor" />
+                        app:layout_constraintTop_toBottomOf="@id/lblHairEyeColor"
+                        app:tint="@color/on_surface" />
 
                     <TextView
                         android:id="@+id/txtHairEyeColor"
@@ -363,9 +363,9 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/person"
-                        app:tint="@color/on_surface"
                         app:layout_constraintStart_toEndOf="@id/guideline"
-                        app:layout_constraintTop_toBottomOf="@id/lblAge" />
+                        app:layout_constraintTop_toBottomOf="@id/lblAge"
+                        app:tint="@color/on_surface" />
 
 
                     <TextView
@@ -388,9 +388,9 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
                         android:src="@drawable/scale"
-                        app:tint="@color/on_surface"
                         app:layout_constraintStart_toStartOf="@id/guideline"
-                        app:layout_constraintTop_toBottomOf="@id/lblHeight_Weight" />
+                        app:layout_constraintTop_toBottomOf="@id/lblHeight_Weight"
+                        app:tint="@color/on_surface" />
 
 
                     <TextView
@@ -411,10 +411,10 @@
                         android:layout_height="18dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        app:tint="@color/on_surface"
                         android:src="@drawable/email"
                         app:layout_constraintStart_toStartOf="@id/guideline"
-                        app:layout_constraintTop_toBottomOf="@id/lblUserName" />
+                        app:layout_constraintTop_toBottomOf="@id/lblUserName"
+                        app:tint="@color/on_surface" />
 
                     <TextView
                         android:id="@+id/txtUsername"
@@ -574,9 +574,9 @@
                         android:id="@+id/lblFullAddress"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
                         android:text="Address  wid "
                         android:textColor="@color/on_surface"
-                        android:layout_marginTop="20dp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/AddressContact" />
@@ -593,10 +593,405 @@
                         app:layout_constraintTop_toBottomOf="@id/lblFullAddress" />
 
 
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <View
+                        android:id="@+id/indicator4"
+                        android:layout_width="4dp"
+                        android:layout_height="20dp"
+                        android:background="#1A237E"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/SecurityAndTech"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Security &amp; Tech"
+                        android:textColor="@color/on_surface"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/indicator4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/lblEIN_SSN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="EIN/SSN"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/SecurityAndTech" />
+
+                    <TextView
+                        android:id="@+id/txtEIN_SSN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="4646464646464"
+                        android:textColor="@color/on_surface"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblEIN_SSN" />
+
+                    <TextView
+                        android:id="@+id/lblIpAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="IP Address"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtEIN_SSN" />
+
+                    <TextView
+                        android:id="@+id/txtIPAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="192.168.2.1"
+                        android:textColor="@color/on_surface"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblIpAddress" />
+
+                    <TextView
+                        android:id="@+id/lblUserAgent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="User Agent"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtIPAddress" />
+
+                    <TextView
+                        android:id="@+id/txtUserAgent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="192.168.2.1"
+                        android:textColor="@color/on_surface"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblUserAgent" />
+
+                    <TextView
+                        android:id="@+id/lblMAC_Address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="MAC Address"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtUserAgent" />
+
+                    <TextView
+                        android:id="@+id/txtMACAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="192.168.2.1"
+                        android:textColor="@color/on_surface"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblMAC_Address" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <View
+                        android:id="@+id/indicator5"
+                        android:layout_width="4dp"
+                        android:layout_height="20dp"
+                        android:background="#1A237E"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Finance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Finance"
+                        android:textColor="@color/on_surface"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/indicator5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/lblCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="CURRENCY"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Finance" />
+
+                    <TextView
+                        android:id="@+id/txtCurrency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="USD"
+                        android:textColor="@color/on_surface"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblCurrency" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="#1A1A1A"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtCurrency">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="24dp">
+
+                            <ImageView
+                                android:id="@+id/iv_chip"
+                                android:layout_width="50dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/chip"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_cardType"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:scaleType="fitCenter"
+                                android:text="Card type"
+                                android:textAlignment="center"
+                                android:textColor="@color/gold"
+                                android:textSize="25dp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_card_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32dp"
+                                android:letterSpacing="0.05"
+                                android:text="**** **** **** 45678"
+                                android:textColor="#FFFFFF"
+                                android:textSize="28sp"
+                                app:layout_constraintBottom_toTopOf="@+id/tv_holder_label"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/iv_chip"
+                                app:layout_constraintVertical_bias="0.0"
+                                app:layout_constraintVertical_chainStyle="packed" />
+
+                            <TextView
+                                android:id="@+id/iban"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="5dp"
+                                android:text="iban:adwadiowjod"
+                                android:textColor="#FFFFFF"
+                                app:layout_constraintBottom_toTopOf="@+id/tv_holder_label"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/tv_holder_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24dp"
+                                android:text="Cardholder Name"
+                                android:textColor="#888888"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toTopOf="@+id/tv_card_holder"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_card_holder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nathan Reynolds"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_expiry_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Expiry Date"
+                                android:textColor="#888888"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toTopOf="@+id/tv_expiry_date"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_expiry_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="02/28"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/background"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <View
+                        android:id="@+id/indicator6"
+                        android:layout_width="4dp"
+                        android:layout_height="20dp"
+                        android:background="#1A237E"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Crypto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Crypto"
+                        android:textColor="@color/on_surface"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/indicator6"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/lblCoin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Coin"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Crypto" />
+                    <TextView
+                        android:id="@+id/txtCoin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Bitcoin"
+                        android:textColor="@color/on_surface"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblCoin" />
+                    <TextView
+                        android:id="@+id/lblNetwork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Coin"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtCoin" />
+                    <TextView
+                        android:id="@+id/txtNetwork"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Bitcoin"
+                        android:textColor="@color/on_surface"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblNetwork" />
+                    <TextView
+                        android:id="@+id/lblWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Wallet"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtNetwork" />
+
+                    <TextView
+                        android:id="@+id/txtWallet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="fheuifhsefsfesf02efefsefs5fe"
+                        android:textColor="@color/on_surface"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblWallet" />
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
         </LinearLayout>
 
     </ScrollView>

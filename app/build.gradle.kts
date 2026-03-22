@@ -4,11 +4,7 @@ plugins {
 
 android {
     namespace = "com.theo.androidAssi"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.theo.androidAssi"
@@ -46,9 +42,15 @@ dependencies {
     implementation(libs.adapter.rxjava3)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
-    implementation(libs.rxjava) // Check Maven for latest version
+    implementation(libs.rxjava)
     implementation(libs.rxandroid)
 
-    implementation (libs.room.runtime)
-    annotationProcessor (libs.room.compiler)
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
+
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+    
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.livedata)
 }

@@ -16,6 +16,7 @@
         android:padding="8dp">
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/ic_launcher_foreground"
@@ -48,7 +49,3 @@
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
-
-
-
-
